@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fffbde;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  color: #096b68;
+  font-size: 28px;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #096b68;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #cceae8;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.group-dropdown {
+  padding: 10px 15px;
+  font-size: 16px;
+  height: auto;
+  background-color: #f8f8f8;
+  border: 2px solid #cceae8;
+}
+
+.group-dropdown:focus {
+  border-color: #129990;
+  background-color: #fff;
+}
+
+.group-dropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23096b68'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 24px;
+}
+
+.form-group textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #129990;
+  outline: none;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+  margin-bottom: 15px;
+  display: block;
+  font-weight: bold;
+}
+ 
+.success {
+  color: green;
+  font-size: 15px;
+  margin-bottom: 15px;
+  display: block;
+  font-weight: bold;
+}
+
+.submit-btn {
+  background-color: #90d1ca;
+  color: #063836;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #129990;
+  color: white;
+}
+
+.submissions-list {
+  margin-top: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 800px; /* Adjust this value based on your content needs */
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.data-table th {
+  background-color: #096b68;
+  color: white;
+  font-weight: 600;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #e6f4f3;
+}
+
+.data-table tr:hover {
+  background-color: #d0f0ee;
+}
+
+.data-table img {
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+}
+
+/* Cookie Consent Box */
+.cookie-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.cookie-box p {
+  margin: 0 0 15px;
+  font-size: 15px;
+  color: #063836;
+  line-height: 1.5;
+}
+
+.cookie-allow-btn {
+  background-color: #90d1ca;
+  color: #063836;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-allow-btn:hover {
+  background-color: #129990;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+    gap: 30px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .header h2 {
+    font-size: 24px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+
+  .group-dropdown {
+    padding: 12px 15px;
+    font-size: 16px;
+    background-size: 20px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .submit-btn {
+    padding: 10px 20px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .group-dropdown {
+    padding: 10px 12px;
+    font-size: 15px;
+    background-size: 18px;
+  }
+
+  .submit-btn {
+    padding: 8px 15px;
+    font-size: 15px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .data-table img {
+    width: 40px;
+    height: 40px;
+  }
+}
